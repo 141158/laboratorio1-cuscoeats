@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CuscoEats - Gestión de Pedidos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <span class="logo-icon">🍲</span>
+        <h1>CuscoEats</h1>
+      </div>
+      <p class="tagline">Plataforma de gestión de comida tradicional cusqueña</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="menu-section">
+      <h2>Platos Tradicionales</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-badge">Típico</div>
+          <h3>Chiri Uchu</h3>
+          <p class="desc">Plato bandera cusqueño con cuy, gallina, cecina, queso, maíz y torreja.</p>
+          <div class="card-footer">
+            <span class="price">S/ 35.00</span>
+            <button class="btn btn-order" onclick="agregarPedido('Chiri Uchu', 35)">Pedir</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-badge">Favorito</div>
+          <h3>Trucha Frita</h3>
+          <p class="desc">Fresca trucha del Valle Sagrado acompañada de papas doradas y sarza criolla.</p>
+          <div class="card-footer">
+            <span class="price">S/ 28.00</span>
+            <button class="btn btn-order" onclick="agregarPedido('Trucha Frita', 28)">Pedir</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-badge">Clásico</div>
+          <h3>Lechón Cusqueño</h3>
+          <p class="desc">Crocante lechón al horno servido con moraya y tamal cusqueño.</p>
+          <div class="card-footer">
+            <span class="price">S/ 32.00</span>
+            <button class="btn btn-order" onclick="agregarPedido('Lechón Cusqueño', 32)">Pedir</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-badge">Entrada</div>
+          <h3>Choclo con Queso</h3>
+          <p class="desc">Choclo tierno del Urubamba servido con abundante queso paria andino.</p>
+          <div class="card-footer">
+            <span class="price">S/ 12.00</span>
+            <button class="btn btn-order" onclick="agregarPedido('Choclo con Queso', 12)">Pedir</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="order-section">
+      <div class="order-box">
+        <h2>🧾 Gestión de Pedidos Activos</h2>
+        <div id="lista-pedidos" class="orders-list">
+          <p class="empty-msg">No hay pedidos registrados todavía. Selecciona un plato arriba para comenzar.</p>
+        </div>
+
+        <div class="order-summary">
+          <div class="total-row">
+            <span>Total a Pagar:</span>
+            <strong id="monto-total">S/ 0.00</strong>
+          </div>
+          <div class="actions">
+            <button class="btn btn-clear" onclick="limpiarPedidos()">Limpiar</button>
+            <button class="btn btn-confirm" onclick="confirmarPedido()">Confirmar Pedido</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 CuscoEats - Sistema de Pedidos Locales (Cusco, Perú)</p>
+      <p class="meta">Proyecto inicial para Ingeniería de Software - UNSAAC</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
